@@ -1,8 +1,8 @@
-function dockerrun(){
+dockerrun (){
   docker run -it  --privileged workenv/$1 /bin/bash
 }
 
-function docker-enter(){
+enter (){
   if [ `docker ps | grep $1 ` ];then
     docker exec -it $1 /bin/bash
   else
