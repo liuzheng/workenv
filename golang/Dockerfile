@@ -6,7 +6,7 @@ ADD ./gvm-installer /tmp/gvm-installer
 RUN apt-get -qqy update
 RUN apt-get install -qqy sshfs
 RUN mkdir /root/test
-RUN bash /tmp/gvm-installer
+RUN cd /root && bash /tmp/gvm-installer
 RUN source /root/.gvm/scripts/gvm
 
 WORKDIR /root/test
