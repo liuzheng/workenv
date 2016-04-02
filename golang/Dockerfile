@@ -1,0 +1,8 @@
+FROM library/golang
+MAINTAINER liuzheng712<liuzheng712@gmail.com>
+
+ADD sources.list /etc/apt/sources.list
+RUN apt-get -qqy update
+RUN apt-get install -qqy sshfs
+
+WORKDIR /root/
